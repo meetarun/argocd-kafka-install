@@ -5,11 +5,13 @@
 server:
   ## ArgoCD config
   ## reference https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/argocd-cm.yaml
+  extraArgs:
+      - --insecure
   configEnabled: true
   config:
     repositories: |
       - type: git
-        url: https://github.com/kurtburak/argocd.git
+        url: https://github.com/meetarun/argocd-kafka-install.git
       - name: argo-helm
         type: helm
         url: https://argoproj.github.io/argo-helm
